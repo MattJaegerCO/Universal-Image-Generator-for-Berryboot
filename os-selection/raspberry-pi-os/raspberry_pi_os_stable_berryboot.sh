@@ -59,7 +59,9 @@ echo "#### DECOMPRESSING RASPBERRY PI OS 64BIT DESKTOP IMAGE ####"
 echo ""
 			sudo unxz --threads=4 *arm64.img.xz
 			echo "1"
-			sudo mkdir $MNT1 $MNT2
+			sudo mkdir $MNT1
+			echo "1.5"
+			sudo mkdir $MNT2
 			echo "2"
 			sudo losetup loop55 -P *arm64.img
 			echo "3"
@@ -84,11 +86,15 @@ echo "#### CONVERTING RASPBERRY PI OS 64BIT DESKTOP IMAGE TO BERRYBOOT ####"
 echo ""
 			sudo mksquashfs $MNT2 $NAME1 -comp lzo -e lib/modules var/cache/apt/archives var/lib/apt/lists
 			echo "12"
-			sudo umount $MNT1 $MNT2
+			sudo umount $MNT1
+			echo "12.5"
+			sudo umount $MNT2
 			echo "13"
 			sudo losetup -d /dev/loop55
 			echo "14"
-			sudo rm -rf *arm64* $MNT1 $MNT2
+			sudo rm -rf *arm64* $MNT1
+			echo "14.5"
+			sudo rm -rf *arm64* $MNT2
 			echo "15"
 echo ""
 echo "#### RASPBERRY PI OS 64BIT DESKTOP IMAGE READY! ####"
