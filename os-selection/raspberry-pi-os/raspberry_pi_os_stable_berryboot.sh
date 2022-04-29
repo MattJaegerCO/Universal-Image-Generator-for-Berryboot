@@ -92,10 +92,10 @@ echo ""
 			echo "13"
 			sudo losetup -d /dev/loop55
 			echo "14"
-			sudo rm -rf *arm64* $MNT1
-			echo "14.5"
-			sudo rm -rf *arm64* $MNT2
-			echo "15"
+#			sudo rm -rf *arm64* $MNT1
+#			echo "14.5"
+#			sudo rm -rf *arm64* $MNT2
+#			echo "15"
 echo ""
 echo "#### RASPBERRY PI OS 64BIT DESKTOP IMAGE READY! ####"
 echo ""
@@ -115,7 +115,10 @@ echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS DESKTOP 32 BIT IMAGE ####"
 echo ""
 			sudo unxz --threads=4 *armhf.img.xz
-			sudo mkdir $MNT1 $MNT2
+			sudo mkdir $MNT1
+			echo "1.5"
+			sudo mkdir $MNT2
+			echo "2"
 			sudo losetup loop55 -P *armhf.img
 			sudo mount /dev/loop55p1 $MNT1
 			sudo mount /dev/loop55p2 $MNT2
@@ -129,9 +132,14 @@ echo ""
 echo "#### CONVERTING RASPBERRY PI OS DESKTOP 32BIT IMAGE TO BERRYBOOT ####"
 echo ""
 			sudo mksquashfs $MNT2 $NAME2 -comp lzo -e lib/modules var/cache/apt/archives var/lib/apt/lists
-			sudo umount $MNT1 $MNT2
+			echo "12"
+			sudo umount $MNT1
+			echo "12.5"
+			sudo umount $MNT2
 			sudo losetup -d /dev/loop55
-			sudo rm -rf *armhf* $MNT1 $MNT2
+			sudo rm -rf *armhf* $MNT1
+			sudo rm -rf *armhf* $MNT2
+			echo "15"
 echo ""
 echo "#### RASPBERRY PI OS DESKTOP 32BIT IMAGE READY! ####"
 echo ""
@@ -151,7 +159,10 @@ echo ""
 echo "#### DECOMPRESSING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE ####"
 echo ""
 			sudo unxz --threads=4 *armhf-full.img.xz
-			sudo mkdir $MNT1 $MNT2
+			sudo mkdir $MNT1
+			echo "1.5"
+			sudo mkdir $MNT2
+			echo "2"
 			sudo losetup loop55 -P *armhf-full.img
 			sudo mount /dev/loop55p1 $MNT1
 			sudo mount /dev/loop55p2 $MNT2
@@ -165,9 +176,17 @@ echo ""
 echo "#### CONVERTING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE TO BERRYBOOT ####"
 echo ""
 			sudo mksquashfs $MNT2 $NAME3 -comp lzo -e lib/modules var/cache/apt/archives var/lib/apt/lists
-			sudo umount $MNT1 $MNT2
+			echo "12"
+			sudo umount $MNT1
+			echo "12.5"
+			sudo umount $MNT2
+			echo "13"
 			sudo losetup -d /dev/loop55
-			sudo rm -rf *armhf-full* $MNT1 $MNT2
+			echo "14"
+			sudo rm -rf *armhf-full* $MNT1
+			echo "14.5"
+			sudo rm -rf *armhf-full* $MNT2
+			echo "15"
 echo ""
 echo "#### Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE READY! ####"
 echo ""
