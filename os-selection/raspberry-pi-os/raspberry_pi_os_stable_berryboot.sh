@@ -30,9 +30,9 @@ URL2="https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2022-
 URL3="https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2022-04-07/2022-04-04-raspios-bullseye-armhf-full.img.xz"
 
 #Names for Converted OS Images
-NAME1="Raspberry Pi_OS_with_desktop_April42022_64BIT_Bullseye-$date.img"
-NAME2="Raspberry Pi_OS_with_desktop_April42022_32BIT_Bullseye-$date.img"
-NAME3="Raspberry Pi_OS_with_desktop_and_rec_soft_April42022_32BIT_Bullseye-$date.img"
+NAME1="Raspberry_Pi_OS_with_desktop_April42022_64BIT_Bullseye-$date.img"
+NAME2="Raspberry_Pi_OS_with_desktop_April42022_32BIT_Bullseye-$date.img"
+NAME3="Raspberry_Pi_OS_with_desktop_and_rec_soft_April42022_32BIT_Bullseye-$date.img"
 
 #Mount Points
 MNT1="/mnt/raspberry-pi-os-boot"
