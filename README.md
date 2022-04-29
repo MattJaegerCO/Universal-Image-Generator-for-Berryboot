@@ -15,7 +15,7 @@ First, install wget and sudo according to your OS:
 <pre>pacman -Syy --noconfirm aria2 squashfs-tools bsdtar --force</pre>
 ## Usage
 Execute the script on any terminal and follow the instructions:
-<pre>bash <(wget -qO- https://git.io/fx6ZG)</pre>
+<pre>bash <(wget -qO- https://raw.githubusercontent.com/MattJaegerCO/Universal-Image-Generator-for-Berryboot/master/universal_image_generator_berryboot.sh)</pre>
 
 ![UniversalGeneator](https://home.alexgoldcheidt.com/upload-arfalyjs/hotlink-ok/universal_image_generator_for_berryboot_berryserver-opt-1615582212-51.png)
 
