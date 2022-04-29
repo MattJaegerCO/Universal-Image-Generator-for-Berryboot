@@ -40,7 +40,7 @@ echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
 #installing packages
-sudo apt-get update && sudo apt-get install aria2 squashfs-tools bsdtar -y
+sudo apt-get update && sudo apt-get install aria2 squashfs-tools bsdtar xz-utils -y
 echo ""
 echo "#### DONE! ####"
 echo ""
@@ -53,7 +53,7 @@ echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
 #installing packages
-sudo yum install aria2 squashfs-tools bsdtar -y
+sudo yum install aria2 squashfs-tools bsdtar xz-utils -y
 echo ""
 echo "#### DONE! ####"
 echo ""
@@ -66,7 +66,7 @@ echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
 #installing packages
-sudo dnf install aria2 squashfs-tools bsdtar -y
+sudo dnf install aria2 squashfs-tools bsdtar xz-utils -y
 echo ""
 echo "#### DONE! ####"
 echo ""
@@ -79,7 +79,7 @@ echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
 #installing packages
-pacman -Syy --noconfirm aria2 squashfs-tools bsdtar --force
+pacman -Syy --noconfirm aria2 squashfs-tools bsdtar xz-utils --force
 echo ""
 echo "#### DONE! ####"
 echo ""
