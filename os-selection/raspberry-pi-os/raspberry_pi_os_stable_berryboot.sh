@@ -57,7 +57,7 @@ echo ""
 echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS 64BIT DESKTOP IMAGE ####"
 echo ""
-			sudo unxz --threads=0 *arm64.img.xz
+			sudo unxz --threads=4 *arm64.img.xz
 			sudo mkdir $MNT1 $MNT2
 			sudo losetup loop55 -P *arm64.img
 			sudo mount /dev/loop55p1 $MNT1
@@ -93,7 +93,7 @@ echo ""
 echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS DESKTOP 32 BIT IMAGE ####"
 echo ""
-			sudo unxz --threads=0 *armhf.img.xz
+			sudo unxz --threads=4 *armhf.img.xz
 			sudo mkdir $MNT1 $MNT2
 			sudo losetup loop55 -P *armhf.img
 			sudo mount /dev/loop55p1 $MNT1
@@ -129,7 +129,7 @@ echo ""
 echo ""
 echo "#### DECOMPRESSING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE ####"
 echo ""
-			sudo unxz --threads=0 *armhf-full.img.xz
+			sudo unxz --threads=4 *armhf-full.img.xz
 			sudo mkdir $MNT1 $MNT2
 			sudo losetup loop55 -P *armhf-full.img
 			sudo mount /dev/loop55p1 $MNT1
