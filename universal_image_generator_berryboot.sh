@@ -132,5 +132,4 @@ bash <(wget -qO- https://raw.githubusercontent.com/MattJaegerCO/Universal-Image-
         *) echo invalid option
 	;;
     esac
-    
 done
