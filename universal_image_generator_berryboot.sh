@@ -15,7 +15,6 @@ fi
 date=$(date +"%d-%b-%Y")
 
 sleep 1
-clear
 #Some artwork...
 echo "-------------------------------------------------";
 echo "  ___                   ___                      ";
@@ -45,7 +44,6 @@ echo ""
 echo "#### DONE! ####"
 echo ""
 sleep 1
-clear
 			break
             ;;
         "CentOS")
@@ -58,7 +56,6 @@ echo ""
 echo "#### DONE! ####"
 echo ""
 sleep 1
-clear
 			break
             ;;
 			"Fedora")
@@ -71,7 +68,6 @@ echo ""
 echo "#### DONE! ####"
 echo ""
 sleep 1
-clear
 			break
             ;;
 			"ArchLinux")
@@ -84,7 +80,6 @@ echo ""
 echo "#### DONE! ####"
 echo ""
 sleep 1
-clear
 			break
 			;;
         "Skip")
@@ -94,7 +89,6 @@ clear
     esac
 done
 sleep 1
-clear
 
 echo "-----------------------------------------------";
 echo "   ___  ___   ___      _        _   _          ";
@@ -137,4 +131,12 @@ bash <(wget -qO- https://raw.githubusercontent.com/MattJaegerCO/Universal-Image-
             ;;
         *) echo invalid option;;
     esac
+	echo "Press any key to continue"
+	while [ true ] ; do
+		read -t 3 -n 1
+		if [ $? = 0 ] ; then
+		exit ;
+	else
+		echo "waiting for the keypress"
+	fi
 done
