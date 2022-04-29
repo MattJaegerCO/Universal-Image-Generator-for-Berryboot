@@ -39,7 +39,10 @@ echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
 #installing packages
-sudo apt update && sudo apt install aria2 squashfs-tools bsdtar xz-utils -y
+sudo apt update
+sudo apt install aria2 -y
+sudo apt install squashfs-tools -y
+sudo apt install xz-utils -y
 echo ""
 echo "#### DONE! ####"
 echo ""
