@@ -1,3 +1,5 @@
+Changed to be latest version of full 64 bit RaspOS and Full All Recommneded Software 32 bit
+
 # Universal Image Generator for Berryboot
 Now you can create your own Berryboot images of Multiples Operating Systems. This script run on: Debian/Ubuntu, CentOS, Fedora and ArchLinux. 
 ## Install Wget & Sudo
