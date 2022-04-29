@@ -161,5 +161,4 @@ echo ""
             ;;
         *) echo invalid option;;
     esac
-read -p "Press any key to continue... " -n1 -s	
 done
