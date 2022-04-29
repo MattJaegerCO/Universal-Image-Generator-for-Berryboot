@@ -92,10 +92,10 @@ echo ""
 			echo "13"
 			sudo losetup -d /dev/loop55
 			echo "14"
-#			sudo rm -rf *arm64* $MNT1
-#			echo "14.5"
-#			sudo rm -rf *arm64* $MNT2
-#			echo "15"
+			sudo rm -rf *arm64* $MNT1
+			echo "14.5"
+			sudo rm -rf *arm64* $MNT2
+			echo "15"
 echo ""
 echo "#### RASPBERRY PI OS 64BIT DESKTOP IMAGE READY! ####"
 echo ""
