@@ -129,6 +129,8 @@ bash <(wget -qO- https://raw.githubusercontent.com/MattJaegerCO/Universal-Image-
         "Exit")
             break
             ;;
-        *) echo invalid option;;
+        *) echo invalid option
+	;;
     esac
+    
 done
