@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Universal Image Generator for Berryboot
+# Universal Image Generator for Berryboot -Slight Mod by MattJaegerCO - Latest RaspOS Images
 # Copyright 2018-2021 Alexander G.
 # https://www.alexgoldcheidt.com
 # https://github.com/agoldcheidt
@@ -129,7 +129,7 @@ bash <(wget -qO- https://git.io/JqZD0)
 "Raspberry Pi OS")
 
 #Starting Raspberry Pi OS Script
-bash <(wget -qO- https://git.io/JqCLj)
+bash <(wget -qO- https://raw.githubusercontent.com/MattJaegerCO/Universal-Image-Generator-for-Berryboot/master/os-selection/raspberry-pi-os/raspberry_pi_os_stable_berryboot.sh)
 		break
             ;;
         "Exit")
