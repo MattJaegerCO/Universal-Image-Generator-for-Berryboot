@@ -15,7 +15,6 @@ fi
 date=$(date +"%d-%b-%Y")
 
 sleep 1
-clear
 #Some arwork...
 echo "--------------------------------------------------------------"
 echo "  ___              _                        ___ _    ___  ___ ";
@@ -55,7 +54,6 @@ echo ""
 echo "#### DOWNLOADING RASPBERRY PI OS 64BIT DESKTOP IMAGE ####"
 echo ""
            aria2c -x 4 -s 4 "$URL1"
-			clear
 echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS 64BIT DESKTOP IMAGE ####"
 echo ""
@@ -70,7 +68,6 @@ echo ""
 			sudo sed -i 's/^\PARTUUID/#\0/g' $MNT2/etc/fstab
 			sudo rm -f $MNT1/kernel* $MNT1/*.elf
 			sudo cp -R $MNT1/* $MNT2/boot/
-clear
 echo ""
 echo "#### CONVERTING RASPBERRY PI OS 64BIT DESKTOP IMAGE TO BERRYBOOT ####"
 echo ""
@@ -78,7 +75,6 @@ echo ""
 			sudo umount $MNT1 $MNT2
 			sudo losetup -d /dev/loop55
 			sudo rm -rf *arm64* $MNT1 $MNT2
-			clear
 echo ""
 echo "#### RASPBERRY PI OS 64BIT DESKTOP IMAGE READY! ####"
 echo ""
@@ -94,7 +90,6 @@ echo ""
 echo "#### DOWNLOADING RASPBERRY PI OS DESKTOP 32BIT IMAGE ####"
 echo ""
            aria2c -x 4 -s 4 "$URL2"
-			clear
 echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS DESKTOP 32 BIT IMAGE ####"
 echo ""
@@ -109,7 +104,6 @@ echo ""
 			sudo sed -i 's/^\PARTUUID/#\0/g' $MNT2/etc/fstab
 			sudo rm -f $MNT1/kernel* $MNT1/*.elf
 			sudo cp -R $MNT1/* $MNT2/boot/
-clear
 echo ""
 echo "#### CONVERTING RASPBERRY PI OS DESKTOP 32BIT IMAGE TO BERRYBOOT ####"
 echo ""
@@ -117,7 +111,6 @@ echo ""
 			sudo umount $MNT1 $MNT2
 			sudo losetup -d /dev/loop55
 			sudo rm -rf *armhf* $MNT1 $MNT2
-			clear
 echo ""
 echo "#### RASPBERRY PI OS DESKTOP 32BIT IMAGE READY! ####"
 echo ""
@@ -133,7 +126,6 @@ echo ""
 echo "#### DOWNLOADING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE ####"
 echo ""
            aria2c -x 4 -s 4 "$URL3"
-			clear
 echo ""
 echo "#### DECOMPRESSING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE ####"
 echo ""
@@ -148,7 +140,6 @@ echo ""
 			sudo sed -i 's/^\PARTUUID/#\0/g' $MNT2/etc/fstab
 			sudo rm -f $MNT1/kernel* $MNT1/*.elf
 			sudo cp -R $MNT1/* $MNT2/boot/
-clear
 echo ""
 echo "#### CONVERTING Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE TO BERRYBOOT ####"
 echo ""
@@ -156,7 +147,6 @@ echo ""
 			sudo umount $MNT1 $MNT2
 			sudo losetup -d /dev/loop55
 			sudo rm -rf *armhf-full* $MNT1 $MNT2
-			clear
 echo ""
 echo "#### Raspberry Pi OS Desktop and Recommended Software 32BIT IMAGE READY! ####"
 echo ""
@@ -167,7 +157,17 @@ echo ""
 			break
             ;;			
         "Exit")
-            break
+	
+	echo "Press any key to continue"
+	while [ true ] ; do
+	read -t 3 -n 1
+	if [ $? = 0 ] ; then
+	exit ;
+	else
+	echo "waiting for the keypress"
+	fi
+        
+	break
             ;;
         *) echo invalid option;;
     esac
