@@ -58,23 +58,38 @@ echo ""
 echo "#### DECOMPRESSING RASPBERRY PI OS 64BIT DESKTOP IMAGE ####"
 echo ""
 			sudo unxz --threads=4 *arm64.img.xz
+			echo "1"
 			sudo mkdir $MNT1 $MNT2
+			echo "2"
 			sudo losetup loop55 -P *arm64.img
+			echo "3"
 			sudo mount /dev/loop55p1 $MNT1
+			echo "4"
 			sudo mount /dev/loop55p2 $MNT2
+			echo "5"
 			sudo find $MNT2 -name 'cached_UTF-8_del.kmap.gz' -exec sh -c 'rm -f $1' _ {} \;
+			echo "6"
 			sudo find $MNT2 -name 'apply_noobs_os_config.service' -exec sh -c 'rm -f $1' _ {} \;
+			echo "7"
 			sudo find $MNT2 -name 'raspberrypi-net-mods.service' -exec sh -c 'rm -f $1' _ {} \;
+			echo "8"
 			sudo sed -i 's/^\PARTUUID/#\0/g' $MNT2/etc/fstab
+			echo "9"
 			sudo rm -f $MNT1/kernel* $MNT1/*.elf
+			echo "10"
 			sudo cp -R $MNT1/* $MNT2/boot/
+			echo "11"
 echo ""
 echo "#### CONVERTING RASPBERRY PI OS 64BIT DESKTOP IMAGE TO BERRYBOOT ####"
 echo ""
 			sudo mksquashfs $MNT2 $NAME1 -comp lzo -e lib/modules var/cache/apt/archives var/lib/apt/lists
+			echo "12"
 			sudo umount $MNT1 $MNT2
+			echo "13"
 			sudo losetup -d /dev/loop55
+			echo "14"
 			sudo rm -rf *arm64* $MNT1 $MNT2
+			echo "15"
 echo ""
 echo "#### RASPBERRY PI OS 64BIT DESKTOP IMAGE READY! ####"
 echo ""
